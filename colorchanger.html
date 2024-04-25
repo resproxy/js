@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color changer</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vmin;
+        }
+        #black, #white, #blue, #red, #green {
+            height: 10vmin;
+            width: 10vmin;
+            border: 2px solid black;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <span id="black"></span>
+            <span id="white"></span>
+            <span id="blue"></span>
+            <span id="red"></span>
+            <span id="green"></span>
+        </div>
+        <script>
+            let body = document.querySelector("body");
+            const black =document.querySelector('#black');
+            let white = document.querySelector('#white');
+            let blue =document.querySelector('#blue');
+            let red = document.querySelector('#red');
+            let green =document.querySelector('#green');
+            let arr = [black, white, blue, red, green];
+            green.style.backgroundColor = green.id;
+            black.style.backgroundColor = black.id;
+            white.style.backgroundColor = white.id;
+            blue.style.backgroundColor = blue.id;
+            red.style.backgroundColor = red.id;
+            // black.addEventListener("click", myFunction1(black));
+            // function myFunction1(obj) {
+            //     console.log(`${obj.id}`);
+            //     document.body.style.backgroundColor= `${obj.id}`;
+            //     }
+
+                    arr[4].addEventListener("mouseover", function() {
+                    myFunction(arr[4]);
+                    });
+                    arr[0].addEventListener("mouseover", function() {
+                    myFunction(arr[0]);
+                    });
+                    arr[1].addEventListener("mouseover", function() {
+                    myFunction(arr[1]);
+                    });
+                    arr[2].addEventListener("mouseover", function() {
+                    myFunction(arr[2]);
+                    });
+                    arr[3].addEventListener("mouseover", function() {
+                    myFunction(arr[3]);
+                    });
+                    body.addEventListener("click", function() {
+                        body.style.backgroundColor = "white";
+                    });
+                    
+                
+                function myFunction(obj) {
+                    document.body.style.backgroundColor= `${obj.id}`;
+                }
+            
+
+        </script>
+</body>
+</html>
